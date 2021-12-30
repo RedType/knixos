@@ -1,0 +1,4 @@
+# knixos
+
+My NixOS configs
+
