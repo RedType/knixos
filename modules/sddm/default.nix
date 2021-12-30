@@ -1,9 +1,13 @@
 { pkgs, ... }:
 
-{
-  environment.systemPackages = with pkgs;
-    [ libsForQt5.qtgraphicaleffects # for sddm themes
-    ];
+let
+  sddm-slice-theme = builtins.fetchGit {
+    url = "https://github.com/radrussianrus/sddm-slice";
+    rev = "1ddbc490a500bdd938a797e72a480f535191b45e";
+  };
+in {
+  # for sddm themes
+  environment.systemPackages = [ pkgs.libsForQt5.qtgraphicaleffects ];
 
   services.xserver.displayManager.sddm = {
     enable = true;
@@ -12,8 +16,8 @@
       Theme = {
         FacesDir = "${./faces}";
         EnableAvatars = true;
-        ThemeDir = "${./themes}";
-        Current = "sddm-slice-1.5.1";
+        ThemeDir = "${sddm-slice-theme}";
+        Current = ".";
       };
     };
   };
