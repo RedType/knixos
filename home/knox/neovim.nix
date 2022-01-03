@@ -1,4 +1,6 @@
-{ pkgs, minimalist-source, ... }: {
+{ pkgs, minimalist-source, ... }:
+
+{
   programs.neovim = 
   let
     minimalist = pkgs.vimUtils.buildVimPlugin {
@@ -76,3 +78,4 @@
     '';
   };
 }
+

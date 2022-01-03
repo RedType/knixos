@@ -11,12 +11,11 @@
   };
 
   home-manager.users.knox = {
-    home.file.".bashrc".source = ./dotfiles/bashrc;
-
     imports =
       [ ./alacritty
+        ./bash.nix
         ./direnv.nix
-        ./neovim
+        ./neovim.nix
         ./sway
       ];
 
