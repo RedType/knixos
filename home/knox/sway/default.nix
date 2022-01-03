@@ -6,8 +6,7 @@
     systemdIntegration = true;
     config = {
       gaps = {
-        inner = 3;
-        outer = 5;
+        inner = 5;
         smartGaps = true;
       };
       menu = "${pkgs.wofi}/bin/wofi --show run";
