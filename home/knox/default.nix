@@ -15,15 +15,13 @@
 
     imports =
       [ ./alacritty
-        #./ardour #FIXME
+        ./direnv
         ./neovim
-        #./xmonad
         ./sway
       ];
 
     home.packages = with pkgs;
-      [ ardour #TODO make me a module
-        imagemagick
+      [ imagemagick
         keepassxc
         neofetch
         nodejs
