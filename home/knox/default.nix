@@ -15,7 +15,7 @@
 
     imports =
       [ ./alacritty
-        ./direnv
+        ./direnv.nix
         ./neovim
         ./sway
       ];
