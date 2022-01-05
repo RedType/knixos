@@ -20,6 +20,12 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
+  users = {
+    mutableUsers = false;
+    # disable root user
+    users."root".hashedPassword = "!";
+  };
+
   environment.systemPackages = with pkgs;
     [ dhcpcd
       firefox

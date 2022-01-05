@@ -6,7 +6,7 @@
     isSystemUser = false;
     createHome = true;
     extraGroups = [ "audio" "networkmanager" "video" "wheel" ];
-    initialHashedPassword =
+    hashedPassword =
       "$6$Uy3VXhGKzHAyxwTa$iL2Z7WjGjBHNkDfe1Xhw8zJAdTL90.a.PSzApq1vXIH2Z7aDWSwBcCJx6TnxTzhYHEROQlpfsjI24phkWBJOy0";
   };
 

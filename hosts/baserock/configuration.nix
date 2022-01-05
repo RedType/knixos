@@ -18,6 +18,12 @@
     };
   };
 
+  users = {
+    mutableUsers = false;
+    # disable root user
+    users."root".hashedPassword = "!";
+  };
+
   environment.systemPackages = with pkgs;
     [ firefox
       git
