@@ -37,6 +37,7 @@
 
       sessionVariables = {
         EDITOR = "${pkgs.neovim}/bin/nvim";
+        GRIM_DEFAULT_DIR = "$HOME/Screenshots";
         PROMPT = "%B%F{43}%~/%f%b %# ";
       };
     };

@@ -1,0 +1,16 @@
+window {
+    padding: 0.3rem;
+    padding-left: 0.5rem;
+    border-radius: 0.15rem;
+    background-color: #bf5656;
+}
+
+#outer-box {
+    background-color: #1e1e26;
+    color: white;
+}
+
+#entry:selected {
+    background-color: #523851;
+}
+
