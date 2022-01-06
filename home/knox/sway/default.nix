@@ -33,6 +33,7 @@
       '';
       modifier = "Mod4";
       terminal = alacritty;
+      screenshotPath = "$HOME/Screenshots";
     in {
       inherit left down up right menu modifier terminal;
 
@@ -53,14 +54,14 @@
         XF86AudioRaiseVolume    = "exec ${amixer} sset 'Master'\\,0 2%+";
         XF86AudioMicMute        = "exec ${amixer} sset 'Capture'\\,0 toggle";
         Print                   = ''
-          exec ${grim} - | \
-          ${tee} "$GRIM_DEFAULT_DIR/$(${date} +%Y-%m-%d-%H:%M:%S).png" | \
-          ${wl-copy}
+          exec '${grim} - \
+          | ${tee} "${screenshotPath}/$(${date} +%Y-%m-%d-%H:%M:%S).png" \
+          | ${wl-copy}'
         '';
         XF86SelectiveScreenshot = ''
-          exec ${grim} -g $(${slurp} -d) - | \
-          ${tee} "$GRIM_DEFAULT_DIR/$(${date} +%Y-%m-%d-%H:%M:%S).png" | \
-          ${wl-copy}
+          exec '${grim} -g "$(${slurp} -d)" - \
+          | ${tee} "${screenshotPath}/$(${date} +%Y-%m-%d-%H:%M:%S).png" \
+          | ${wl-copy}'
         '';
         #XF86Display # fn-f7
         #XF86WLAN # fn-f8

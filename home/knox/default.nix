@@ -29,6 +29,7 @@
           rustup
           steam
           unzip
+          wl-clipboard
           xdotool
           xonotic
           yarn
