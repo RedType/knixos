@@ -48,10 +48,10 @@
         # names captured via `nixpkgs#wev`
         XF86MonBrightnessDown   = "exec ${brightnessctl} set 2%-";
         XF86MonBrightnessUp     = "exec ${brightnessctl} set 2%+";
-        XF86AudioMute           = "exec ${amixer} sset 'Master',0 toggle";
-        XF86AudioLowerVolume    = "exec ${amixer} sset 'Master',0 2%-";
-        XF86AudioRaiseVolume    = "exec ${amixer} sset 'Master',0 2%+";
-        XF86AudioMicMute        = "exec ${amixer} sset 'Capture',0 toggle";
+        XF86AudioMute           = "exec ${amixer} sset 'Master'\\,0 toggle";
+        XF86AudioLowerVolume    = "exec ${amixer} sset 'Master'\\,0 2%-";
+        XF86AudioRaiseVolume    = "exec ${amixer} sset 'Master'\\,0 2%+";
+        XF86AudioMicMute        = "exec ${amixer} sset 'Capture'\\,0 toggle";
         Print                   = ''
           exec ${grim} - | \
           ${tee} "$GRIM_DEFAULT_DIR/$(${date} +%Y-%m-%d-%H:%M:%S).png" | \
