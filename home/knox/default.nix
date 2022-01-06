@@ -24,9 +24,7 @@
         [ imagemagick
           keepassxc
           neofetch
-          nodejs
           rclone
-          rustup
           steam
           unzip
           wl-clipboard
