@@ -37,7 +37,7 @@
 
       sessionVariables = {
         EDITOR = "${pkgs.neovim}/bin/nvim";
-        SHELL = "${pkgs.zsh}/bin/zsh";
+        PROMPT = "%B%F{43}%~/%f%b %# ";
       };
     };
   };
