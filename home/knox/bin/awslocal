@@ -1,6 +1,27 @@
 #!/usr/bin/env sh
 
-CONTAINER_NAME="$(docker container ls | awk '/localstack/ { print $(NF); exit }')"
-CLI_ENDPOINT="http://$(docker port $CONTAINER_NAME | awk '/4566/ { print $(NF); exit }')"
+PORT=4566
+PATTERN="localstack"
+
+# those characters are tricky to interpolate into a double quoted string
+NF='$(NF)'
+
+CONTAINER_NAME="$(docker container ls | awk "/$PATTERN/ { print $NF; exit }")"
+
+if [ -z "$CONTAINER_NAME" ]; then
+    echo "There is no localstack container to run against"
+    exit
+else
+    echo -n "Using container $CONTAINER_NAME"
+fi
+
+CLI_ENDPOINT="http://$(docker port $CONTAINER_NAME | awk "/$PORT/ { print $NF; exit }")"
+
+if [ -z "$CLI_ENDPOINT" ]; then
+    echo -e "\nPort $PORT doesn't seem to be exposed..."
+    exit
+else
+    echo " at $CLI_ENDPOINT"
+fi
 
 aws --endpoint-url="$CLI_ENDPOINT" "$@"
