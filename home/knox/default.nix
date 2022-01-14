@@ -23,7 +23,7 @@
       file."bin".source = ./bin;
 
       packages = with pkgs;
-        [ awscli # bin/awslocal depends on this
+        [ awscli2 # bin/awslocal depends on this
           imagemagick
           keepassxc
           neofetch
