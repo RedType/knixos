@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+CONTAINER_NAME="$(docker container ls | awk '/localstack/ { print $(NF); exit }')"
+CLI_ENDPOINT="http://$(docker port $CONTAINER_NAME | awk '/4566/ { print $(NF); exit }')"
+
+aws --endpoint-url="$CLI_ENDPOINT" "$@"

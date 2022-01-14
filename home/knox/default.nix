@@ -20,10 +20,14 @@
       ];
 
     home = {
+      file."bin".source = ./bin;
+
       packages = with pkgs;
-        [ imagemagick
+        [ awscli # bin/awslocal depends on this
+          imagemagick
           keepassxc
           neofetch
+          nodejs
           rclone
           steam
           unzip
@@ -33,6 +37,8 @@
           yarn
           zip
         ];
+
+      sessionPath = [ "$HOME/bin" ];
 
       sessionVariables = {
         EDITOR = "${pkgs.neovim}/bin/nvim";
