@@ -25,6 +25,7 @@
       coc-rls
       coc-tslint-plugin
       coc-tsserver
+      coc-yaml
       coc-yank
       
       # various syntax hilighters
@@ -33,6 +34,7 @@
       vim-nix
       vim-toml
       vim-tsx
+      vim-vue
 
       # pretty colors @w@
       minimalist
@@ -52,26 +54,29 @@
       set copyindent
 
       " set tabstop etc to 2 for select languages
-      au BufEnter,BufNew *.hs  setlocal ts=2 sts=2 sw=2 " haskell
-      au BufEnter,BufNew *.nix setlocal ts=2 sts=2 sw=2 " nix
-      au BufEnter,BufNew *.js  setlocal ts=2 sts=2 sw=2 " javascript
-      au BufEnter,BufNew *.jsx setlocal ts=2 sts=2 sw=2
-      au BufEnter,BufNew *.ts  setlocal ts=2 sts=2 sw=2 " typescript
-      au BufEnter,BufNew *.tsx setlocal ts=2 sts=2 sw=2
-      au BufEnter,BufNew *.rs  setlocal ts=2 sts=2 sw=2 " rust
+      au BufEnter,BufNew *.hs   setlocal ts=2 sts=2 sw=2 " haskell
+      au BufEnter,BufNew *.nix  setlocal ts=2 sts=2 sw=2 " nix
+      au BufEnter,BufNew *.js   setlocal ts=2 sts=2 sw=2 " javascript
+      au BufEnter,BufNew *.jsx  setlocal ts=2 sts=2 sw=2
+      au BufEnter,BufNew *.ts   setlocal ts=2 sts=2 sw=2 " typescript
+      au BufEnter,BufNew *.tsx  setlocal ts=2 sts=2 sw=2
+      au BufEnter,BufNew *.vue  setlocal ts=2 sts=2 sw=2 " vue
+      au BufEnter,BufNew *.rs   setlocal ts=2 sts=2 sw=2 " rust
+      au BufEnter,BufNew *.json setlocal ts=2 sts=2 sw=2 " json
 
       " enable syntax hilighting for react
       au BufEnter,BufNew *.ts  setlocal filetype=typescript
       au BufEnter,BufNew *.tsx setlocal filetype=typescriptreact
 
       " fix the godawful default colors for pmenu
-      hi Pmenu      ctermfg=0   ctermbg=1 guibg=DarkBlue
-      hi PmenuSel   ctermfg=242 ctermbg=0 guibg=Grey40
-      hi PmenuThumb ctermfg=0 ctermbg=242 guifg=Black guibg=White
-      hi TabLine    cterm=underline ctermfg=15 ctermbg=242 gui=underline guibg=Grey40
-      hi RedrawDebugClear ctermbg=11 ctermfg=0 guibg=Yellow guifg=Black
-      hi NvimInternalError ctermfg=9 ctermbg=4 guifg=Red guibg=DarkRed
-      hi Conceal    ctermbg=0 ctermfg=8 guibg=Black guifg=DarkGray
+      hi Pmenu             ctermbg=1   ctermfg=0   guibg=DarkBlue
+      hi PmenuSel          ctermbg=0   ctermfg=242 guibg=Grey40
+      hi PmenuThumb        ctermbg=242 ctermfg=0   guibg=White   guifg=Black
+      hi RedrawDebugClear  ctermbg=11  ctermfg=0   guibg=Yellow  guifg=Black
+      hi NvimInternalError ctermbg=4   ctermfg=9   guibg=DarkRed guifg=Red
+      hi Conceal           ctermbg=0   ctermfg=8   guibg=Black   guifg=DarkGray
+      hi TabLine           ctermbg=242 ctermfg=15  guibg=Grey40
+                         \ cterm=underline gui=underline
 
       " no more code completion please
       let b:coc_suggest_disable = 1
