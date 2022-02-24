@@ -14,6 +14,7 @@
   home-manager.users.knox = {
     imports =
       [ ./alacritty
+        ./discord.nix
         ./neovim.nix
         ./sway
         ./zsh.nix
@@ -21,15 +22,10 @@
 
     home = {
       file."bin".source = ./bin;
-      # stop discord from demanding constant updates
-      file.".config/discord/settings.json".text = ''
-        "SKIP_HOST_UPDATE": true
-      '';
 
       packages = with pkgs;
         [ awscli2 # bin/awslocal depends on this
           chromium
-          discord
           filezilla
           imagemagick
           keepassxc
