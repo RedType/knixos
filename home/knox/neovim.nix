@@ -57,6 +57,7 @@
       au BufEnter,BufNew *.hs   setlocal ts=2 sts=2 sw=2 " haskell
       au BufEnter,BufNew *.nix  setlocal ts=2 sts=2 sw=2 " nix
       au BufEnter,BufNew *.js   setlocal ts=2 sts=2 sw=2 " javascript
+      au BufEnter,BufNew *.mjs  setlocal ts=2 sts=2 sw=2 " javascript
       au BufEnter,BufNew *.jsx  setlocal ts=2 sts=2 sw=2
       au BufEnter,BufNew *.ts   setlocal ts=2 sts=2 sw=2 " typescript
       au BufEnter,BufNew *.tsx  setlocal ts=2 sts=2 sw=2
