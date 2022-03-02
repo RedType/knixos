@@ -26,6 +26,7 @@
       packages = with pkgs;
         [ awscli2 # bin/awslocal depends on this
           chromium
+          file
           filezilla
           imagemagick
           keepassxc
