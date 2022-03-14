@@ -33,6 +33,7 @@
           neofetch
           nodejs
           rclone
+          slack
           steam
           unzip
           wl-clipboard
