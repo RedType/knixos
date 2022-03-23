@@ -32,6 +32,10 @@
           keepassxc
           neofetch
           nodejs
+          (python3.withPackages (p: with p; [
+            boto3 # aws sdk for python
+            faker
+          ]))
           rclone
           slack
           steam
