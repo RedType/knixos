@@ -29,6 +29,7 @@
           file
           filezilla
           imagemagick
+          jq
           keepassxc
           neofetch
           nodejs
