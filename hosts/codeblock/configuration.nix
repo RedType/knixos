@@ -40,7 +40,10 @@
 
   services = {
     openssh.enable = true;
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = [ pkgs.hplip ];
+    };
   };
 
   virtualisation.docker.enable = true;
