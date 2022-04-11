@@ -80,7 +80,7 @@
                          \ cterm=underline gui=underline
 
       " no more code completion please
-      let b:coc_suggest_disable = 1
+      "let b:coc_suggest_disable = 1
     '';
   };
 }
