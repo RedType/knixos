@@ -1,10 +1,7 @@
 {
   hardware.bluetooth = {
     enable = true;
-    extraConfig = ''
-      [General]
-      ControllerMode = bredr
-    '';
+    settings.General.ControllerMode = "bredr";
   };
   services.blueman.enable = true;
 }
