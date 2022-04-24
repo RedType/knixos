@@ -45,7 +45,7 @@
           unzip
           wl-clipboard
           xdotool
-          xonotic
+          #xonotic
           yarn
           zip
         ];
