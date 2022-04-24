@@ -26,8 +26,10 @@
       packages = with pkgs;
         [ awscli2 # bin/awslocal depends on this
           chromium
+          docker-compose
           file
           filezilla
+          google-cloud-sdk
           imagemagick
           jq
           keepassxc
