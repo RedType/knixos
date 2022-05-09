@@ -33,8 +33,8 @@
           modules =
             [ ./hosts/baserock/configuration.nix
               ./common/my-locale.nix
-              ./modules/sddm
-              ./modules/sway-system
+              #./modules/sddm
+              #./modules/sway-system
 
               # users
               hm-module
@@ -48,7 +48,7 @@
           system = "x86_64-linux";
           modules =
             [ ./hosts/codeblock/configuration.nix
-              nixos-hardware.nixosModules.lenovo-thinkpad-x1-extreme-gen2
+              #nixos-hardware.nixosModules.lenovo-thinkpad-x1-extreme-gen2
               ./common/my-locale.nix
               ./modules/sddm
               ./modules/sway-system
