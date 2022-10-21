@@ -23,6 +23,7 @@
       coc-json
       coc-prettier
       coc-rls
+      coc-svelte
       coc-tslint-plugin
       coc-tsserver
       coc-yaml
@@ -32,6 +33,7 @@
       typescript-vim
       vim-jsx-typescript
       vim-nix
+      vim-svelte
       vim-toml
       vim-tsx
       vim-vue
@@ -46,26 +48,18 @@
       set termguicolors
       set number        " line numbers
 
-      set tabstop=4
-      set softtabstop=4
-      set shiftwidth=4
+      set tabstop=2
+      set softtabstop=2
+      set shiftwidth=2
       set expandtab
       set autoindent
       set copyindent
 
-      " set tabstop etc to 2 for select languages
-      au BufEnter,BufNew *.hs   setlocal ts=2 sts=2 sw=2 " haskell
-      au BufEnter,BufNew *.nix  setlocal ts=2 sts=2 sw=2 " nix
-      au BufEnter,BufNew *.js   setlocal ts=2 sts=2 sw=2 " javascript
-      au BufEnter,BufNew *.mjs  setlocal ts=2 sts=2 sw=2 " javascript
-      au BufEnter,BufNew *.jsx  setlocal ts=2 sts=2 sw=2
-      au BufEnter,BufNew *.ts   setlocal ts=2 sts=2 sw=2 " typescript
-      au BufEnter,BufNew *.tsx  setlocal ts=2 sts=2 sw=2
-      au BufEnter,BufNew *.vue  setlocal ts=2 sts=2 sw=2 " vue
-      au BufEnter,BufNew *.rs   setlocal ts=2 sts=2 sw=2 " rust
-      au BufEnter,BufNew *.json setlocal ts=2 sts=2 sw=2 " json
+      " set tabstop etc to 4 for select languages
+      au BufEnter,BufNew *.c setlocal ts=4 sts=4 sw=4 " c source
+      au BufEnter,BufNew *.h setlocal ts=4 sts=4 sw=4 " c header
 
-      " enable syntax hilighting for react
+      " enable syntax hilighting
       au BufEnter,BufNew *.ts  setlocal filetype=typescript
       au BufEnter,BufNew *.tsx setlocal filetype=typescriptreact
 
@@ -81,6 +75,9 @@
 
       " no more code completion please
       "let b:coc_suggest_disable = 1
+
+      " enable syntax hilight in svelte
+      let g:vim_svelte_plugin_use_typescript = 1
     '';
   };
 }
